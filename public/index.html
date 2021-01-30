@@ -60,11 +60,12 @@
                     <div class="card" style="width: 18rem;" id="recipeCard">
                         <img src="imgs/recipe1.jpg" class="card-img-top" alt="..."  id="cardPic0">
                         <div class="card-body">
-                            <h5 class="card-title" id="cardName"></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title" id="cardName0"></h5>
+                            <p class="card-text" id="cardIngre0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn card-button text-white">Go somewhere</a>
+                            
                         </div>
-                        </div>
+                        <button class="btn btn-danger btn-outline-danger" onclick="deleteRecipe(this)">Delete</button>
                     </div>
                 </div>
             </div>
@@ -123,6 +124,7 @@
             </div>
         </div>
     </div>
+    
 
     <footer>
         <button onclick="mainApp.logOut()">Log Out</button>

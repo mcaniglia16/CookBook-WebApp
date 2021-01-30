@@ -80,6 +80,9 @@ body {
     box-sizing: border-box;
 }
 
+/* This hover before and after causes problems with the card buttons.
+They become unclickable
+
 .card:hover:before {
     height: 30rem;
     width: 18rem;
@@ -97,11 +100,12 @@ body {
     border-top: none;
     transition: height 0.2s ease-in, width 0.2s ease-in 0.2s;
 }
+*/
 
 .card:hover {
     cursor: pointer;
     background-color: #4e4e4e;
-    transition: all 0.32s;
+    transition: all 0.52s;
 }
 
 .card-body {

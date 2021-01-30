@@ -15,14 +15,17 @@ function addRecipe() {
         firstEntry = false
         var hidden = document.getElementById("outerRecipeCard");
         hidden.style.display = "block";
-        document.getElementById("cardName").innerHTML = recipeName;
+        document.getElementById("cardName0").innerHTML = recipeName;
     }
     
     else{
         var newCard = baseCard.cloneNode(true);
         console.log(newCard.childNodes)
+        console.log(newCard.childNodes[3].childNodes)
         newCard.id = "recipeCard" + ++i;
         newCard.childNodes[1].id = "cardPic" + i;
+        newCard.childNodes[3].childNodes[1].id = "cardName" + i;
+        newCard.childNodes[3].childNodes[3].id = "cardIngre" + i;
         baseCard.parentNode.appendChild(newCard);
         
     }
@@ -36,14 +39,21 @@ function addRecipe() {
     var ovenTemp = document.forms["recipe-content"]["oven-temp"].value;
 
     console.log(recipeName);
-    document.getElementById("cardName").innerHTML = recipeName;
+    document.getElementById("cardName"+i).innerHTML = recipeName;
     document.getElementById("cardPic"+i).src = userCustomImg;
+    document.getElementById("cardIngre"+i).innerHTML = ingredients;
     console.log(userCustomImg);
 }
 
-function deleteRecipe(parent) {
-    const p = parent.parentElement;
-    p.remove();
+function deleteRecipe(node) {
+    if (i-1 > 0) {
+        node.parentElement.remove();
+    }
+    else {
+        firstEntry = true;
+        var hidden = document.getElementById("outerRecipeCard");
+        hidden.style.display = "None";
+    }
 }
 
 function getImg(event) {
@@ -108,7 +118,7 @@ function addRecipeSearch() {
             firstEntry = false
             var hidden = document.getElementById("outerRecipeCard");
             hidden.style.display = "block";
-            document.getElementById("cardName").innerHTML = latestSearch['title'];
+            document.getElementById("cardName0").innerHTML = latestSearch['title'];
         }
         
         else{
@@ -117,9 +127,15 @@ function addRecipeSearch() {
             newCard.id = "recipeCard" + ++i;
             newCard.childNodes[1].id = "cardPic" + i;
             newCard.childNodes[1].src = latestSearch['img'];
+            newCard.childNodes[3].childNodes[1].id = "cardName" + i;
+            newCard.childNodes[3].childNodes[3].id = "cardIngre" + i;
             baseCard.parentNode.appendChild(newCard);
             
         }
+
+        document.getElementById("cardName"+i).innerHTML = latestSearch['title'];
+        document.getElementById("cardPic"+i).src = latestSearch['img'];
+        document.getElementById("cardIngre"+i).innerHTML = latestSearch['ingredients'];
     }
 }
 

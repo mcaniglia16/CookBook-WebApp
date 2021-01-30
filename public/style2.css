@@ -84,6 +84,8 @@ body {
     box-sizing: border-box;
 }
 
+/* causes problems with card buttons (become unclickable)
+
 .card:hover:before {
     height: 30rem;
     width: 18rem;
@@ -101,6 +103,7 @@ body {
     border-top: none;
     transition: height 0.2s ease-in, width 0.2s ease-in 0.2s;
 }
+*/
 
 .card:hover {
     cursor: pointer;
