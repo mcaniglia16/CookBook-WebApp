@@ -21,7 +21,9 @@ function addRecipeCard() {
     
     else{
         var newCard = baseCard.cloneNode(true);
-        newCard.id = "new" + ++i;
+        console.log(newCard.childNodes[1].id)
+        newCard.id = "recipeCard" + ++i;
+        newCard.childNodes[1].id = "cardPic" + i;
         baseCard.parentNode.appendChild(newCard);
         
     }
@@ -34,7 +36,8 @@ function addRecipeCard() {
 
     console.log(recipeName);
     document.getElementById("cardName").innerHTML = recipeName;
-    document.getElementById("cardPic").src = userCustomImg;
+    document.getElementById("cardPic"+i).src = userCustomImg;
+    console.log(userCustomImg);
     
 
    
