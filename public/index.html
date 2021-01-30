@@ -45,27 +45,27 @@
         <h1 class="title">My Cookbook</h1>
     </div>
 
-    <!-- temp testing button-->
-    <!-- <button class="btn btn-outline-danger" onclick="addRecipe()">test button to add card</button> -->
     
-
+    
+    <!-- Cards will be added here dynamically.
+         they *should* be ordered horizontally; don't change the classes unless you
+         want to feel the debugging pain!!! -->
     <section class="container-fluid align-items-center px-5">
-        <div class="row" id="list1"></div>
-    </div>
-            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center" style="display:none;" id="outerRecipeCard">
-                <div class="card" style="width: 18rem;" id="recipeCard">
-                    <img src="imgs/recipe1.jpg" class="card-img-top" alt="..."  id="cardPic">
-                    <div class="card-body">
-                        <h5 class="card-title" id="cardName"></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+            <div class="recipeCard text-center" style="display:none;" id="outerRecipeCard">
+                <div class="row" id="list1">
+                    <div class="card" style="width: 18rem;" id="recipeCard">
+                        <img src="imgs/recipe1.jpg" class="card-img-top" alt="..."  id="cardPic">
+                        <div class="card-body">
+                            <h5 class="card-title" id="cardName"></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn card-button text-white">Go somewhere</a>
+                        </div>
                     </div>
+                </div>
             </div>
-          
-            
         </div>
-
     </section>
+
 
     <footer class="container-fluid align-items-center">
     </footer>

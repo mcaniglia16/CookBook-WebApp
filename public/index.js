@@ -27,7 +27,7 @@ function addRecipeCard() {
     }
 
     var recipeName = document.forms["recipe-content"]["recipe-name"].value;
-    var fileName = document.forms["recipe-content"]["file-name"].value;
+    //var fileName = document.forms["recipe-content"]["file-name"].value;
     var ingredients = document.forms["recipe-content"]["ingredients"].value;
     var steps = document.forms["recipe-content"]["steps"].value;
     var cookTime = document.forms["recipe-content"]["cook-time"].value;

@@ -21,11 +21,6 @@ body {
 .row {
     display: flex;
     /* justify-content: space-evenly; */
-    padding: 0;
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
 }
 
 
@@ -205,10 +200,4 @@ label span {
 label input, label textarea, label select {
     margin-left: 120px; 
 
-}
-
-#list1{
-    display: flex;
-    flex-direction: row;
-    display: inline-block;
 }
