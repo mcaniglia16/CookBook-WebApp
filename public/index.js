@@ -1,5 +1,5 @@
 var styleState = true;
-const recipeList = document.getElementById('list1')
+var userCustomImg = '';
 
 function swapCSS() {
     const current = document.getElementById('customStyle');
@@ -27,7 +27,6 @@ function addRecipeCard() {
     }
 
     var recipeName = document.forms["recipe-content"]["recipe-name"].value;
-    //var fileName = document.forms["recipe-content"]["file-name"].value;
     var ingredients = document.forms["recipe-content"]["ingredients"].value;
     var steps = document.forms["recipe-content"]["steps"].value;
     var cookTime = document.forms["recipe-content"]["cook-time"].value;
@@ -35,6 +34,7 @@ function addRecipeCard() {
 
     console.log(recipeName);
     document.getElementById("cardName").innerHTML = recipeName;
+    document.getElementById("cardPic").src = userCustomImg;
     
 
    
@@ -43,6 +43,12 @@ function addRecipeCard() {
 function deleteRecipe(parent) {
     const p = parent.parentElement;
     p.remove();
+}
+
+function getImg(event) {
+    var i = document.getElementById('outputImg');
+    i.src = URL.createObjectURL(event.target.files[0]);
+    userCustomImg = i.src;
 }
 
 

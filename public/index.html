@@ -81,13 +81,13 @@
                     <h3 class="modal-title">Add a recipe</h3>
                     <form name="recipe-content" action="/path.py" >
                         <label><span>Recipe Name:</span> <input type="text" name="recipe-name"></label>
-                        <label><span>Add picture: </span> <input type="file" id="myFile" name="filename"></label>
+                        <label><span>Add picture: </span> <input type="file" id="myFile" accept="image/*" onChange="getImg(event)" name="filename"></label>
                         <label><span>Ingredients:</span><textarea rows = "5" cols = "40" name = "ingredients"></textarea></label>
                         <label><span>Steps:</span><textarea rows = "5" cols = "40" name = "steps"></textarea></label>
                         <label><span>Cook time:</span><input type="text" name="cook-time"></label>
                         <label><span>Oven temp:</span><input type="text" name="oven-temp"></label>
-
                     </form>
+                    <img id="outputImg" width="200" />	
                 </div>
                 <div class='modal-footer'>
                     <button type='button' class='btn btn-default' data-dismiss="modal" onclick="addRecipeCard()">Submit</button>
