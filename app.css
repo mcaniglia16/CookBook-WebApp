@@ -157,7 +157,9 @@ label input, label textarea, label select {
 }
 
 
-
+ul > li {
+    display: inline-block
+}
    
 
 
