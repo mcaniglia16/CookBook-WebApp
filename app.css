@@ -10,6 +10,7 @@ body {
 
 section {
     display: flex;
+    justify-content: center;
     padding: 0;
 }
 
@@ -42,3 +43,5 @@ header {
     height: 20%;
     width: 50%;
 } */
+
+@media (max-width:) {}
