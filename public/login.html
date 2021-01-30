@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/icon.png">
     <title>Log In</title>
+
+    <link id="customStyle" rel="stylesheet" type='text/css' href="login1.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
@@ -15,10 +21,26 @@
 </head>
 
 <body>
-    <h1>Welcome to My Awesome App</h1>
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
 
+    <header>
+        <div class="toggle px-5">
+            <label class="switch"><input id="toggler" onclick='swapCSS()' type="checkbox" />    <div></div></label>
+        </div>
+    </header>
+
+    <div class="row container-fluid">
+        <h1>Welcome to Cookbook.io</h1>
+    </div>
+    <div class="row container-fluid">
+        <img src="imgs/icon.png" alt="">
+    </div>
+    <div class="login-box">
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
     <script src="fireBase.js"></script>
     <script src="login.js"></script>
 </body>
