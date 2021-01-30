@@ -1,0 +1,46 @@
+body {
+    background-color: #474747;
+    font-family: "Playfair Display", sans-serif;
+}
+
+::selection {
+    background-color: #a82637;
+    color: white;
+}
+
+section {
+    display: flex;
+    padding: 0;
+}
+
+.recipesBox {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin: 0;
+    padding: 0; */
+}
+
+.title {
+    font-weight: 400;
+    font-size: 5rem;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card-img-top {
+    padding: 1.2em;
+}
+
+
+/* .card {
+    height: 20%;
+    width: 50%;
+} */
+
+@media (max-width)
