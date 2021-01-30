@@ -7,25 +7,42 @@ function swapCSS() {
     styleState = !styleState;
 }
 
-function addRecipe() {
-    const newRecipe = document.createElement('div');
-    newRecipe.className = "recipeCard col-xs-12 col-sm-6 col-md-3 text-center";
-    /*get form submission later*/
-    const content = `
-                <div class="card" style="width: 18rem;">
-                    <img src="imgs/recipe1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn card-button text-white">Go somewhere</a>
-                    </div>
-                </div>
-    `
-    newRecipe.innerHTML = content;
-    recipeList.appendChild(newRecipe);
+var i=0;
+var baseCard = document.getElementById('recipeCard');
+var firstEntry = true;
+
+function addRecipeCard() {
+    if(firstEntry){
+        firstEntry = false
+        var hidden = document.getElementById("outerRecipeCard");
+        hidden.style.display = "block";
+        document.getElementById("cardName").innerHTML = recipeName;
+    }
+    
+    else{
+        var newCard = baseCard.cloneNode(true);
+        newCard.id = "new" + ++i;
+        baseCard.parentNode.appendChild(newCard);
+        
+    }
+
+    var recipeName = document.forms["recipe-content"]["recipe-name"].value;
+    var fileName = document.forms["recipe-content"]["file-name"].value;
+    var ingredients = document.forms["recipe-content"]["ingredients"].value;
+    var steps = document.forms["recipe-content"]["steps"].value;
+    var cookTime = document.forms["recipe-content"]["cook-time"].value;
+    var ovenTemp = document.forms["recipe-content"]["oven-temp"].value;
+
+    console.log(recipeName);
+    document.getElementById("cardName").innerHTML = recipeName;
+    
+
+   
 }
 
 function deleteRecipe(parent) {
     const p = parent.parentElement;
     p.remove();
 }
+
+
