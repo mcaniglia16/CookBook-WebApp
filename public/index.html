@@ -7,7 +7,7 @@
     <link rel="icon" href="imgs/icon.png">
     <title>Cookbook.io</title>
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
@@ -21,6 +21,11 @@
     <link id="customStyle" rel="stylesheet" type='text/css' href="style1.css">
     <title>My Cookbook</title>
 
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script> -->
+
 </head>
 
 <body class="gradient-border" id="box">
@@ -33,8 +38,7 @@
             <ul class="navbar-nav">
 
             </ul>
-            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipeSearch">Search a recipe</button>
-            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
+            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt" onclick="addRecipe()">Add Recipe</button>
         </div>
     </nav>
 
@@ -46,29 +50,76 @@
         <h1 class="title">My Cookbook</h1>
     </div>
 
-    
-    
-    <!-- Cards will be added here dynamically.
-         they *should* be ordered horizontally; don't change the classes unless you
-         want to feel the debugging pain!!! -->
+    <!-- temp testing button-->
+    <!-- <button class="btn btn-outline-danger" onclick="addRecipe()">test button to add card</button> -->
+
     <section class="container-fluid align-items-center px-5">
-            <div class="recipeCard text-center" style="display:none;" id="outerRecipeCard">
-                <div class="row" id="list1">
-                    <div class="card" style="width: 18rem;" id="recipeCard">
-                        <img src="imgs/recipe1.jpg" class="card-img-top" alt="..."  id="cardPic0">
-                        <div class="card-body">
-                            <h5 class="card-title" id="cardName"></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn card-button text-white">Go somewhere</a>
-                        </div>
+        <div class="row" id="list1">
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
-
-    <footer class="container-fluid align-items-center">
     </footer>
 
 
@@ -80,48 +131,32 @@
                 </div>
                 <div class='modal-body'>
                     <h3 class="modal-title">Add a recipe</h3>
-                    <form name="recipe-content" action="/path.py" >
+                    <form action="/path.py" class="recipe-content">
                         <label><span>Recipe Name:</span> <input type="text" name="recipe-name"></label>
-                        <label><span>Add picture: </span> <input type="file" id="myFile" accept="image/*" onChange="getImg(event)" name="filename"></label>
+                        <label><span>Add picture: </span> <input type="file" id="myFile" name="filename"></label>
                         <label><span>Ingredients:</span><textarea rows = "5" cols = "40" name = "ingredients"></textarea></label>
                         <label><span>Steps:</span><textarea rows = "5" cols = "40" name = "steps"></textarea></label>
                         <label><span>Cook time:</span><input type="text" name="cook-time"></label>
                         <label><span>Oven temp:</span><input type="text" name="oven-temp"></label>
+
                     </form>
-                    <img id="outputImg" width="200" />	
                 </div>
                 <div class='modal-footer'>
-                    <button type='button' class='btn btn-default' data-dismiss="modal" onclick="addRecipeCard()">Submit</button>
+                    <button type='button' class='btn btn-default' data-dismiss="modal" onclick="submit()">Submit</button>
                     <button type='button' class='btn btn-default' data-dismiss="modal">Cancel</button>
                 </div>
             </div>
 
         </div>
     </div>
-    </div>
 
-    <div id='recipeSearch' class='modal fade' role="dialog">
-        <div class='modal-dialog'>
-            <div class='modal-content'>
-                <div class='modal-header'>
-                    <button type='button' class='close' data-dismiss='modal'>&times;</button>
-                </div>
-                <div class='modal-body'>
-                    <h3 class="modal-title">Search a recipe</h3>
-                    <form class="recipe-content" method='GET'>
-                        <label><span>Search meal:</span> <input id="searchTerm" type="text" name="recipe-name"></label>
-                    </form>
-                    <button type='submit' class='btn btn-default' onclick="searchRecipe('searchTerm', 'searchResult')">Search</button>
-                    <div id='searchResult'>
-                    </div>
-                </div>
-                <div class='modal-footer'>
-                    <button type='button' class='btn btn-default' data-dismiss="modal" onclick="addRecipeSearch()">Add</button>
-                    <button type='button' class='btn btn-default' data-dismiss="modal">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer>
+        <button onclick="mainApp.logOut()">Log Out</button>
+    </footer>
+
+
+    <script src="fireBase.js"></script>
+    <script src="login.js"></script>
 
     <script type="text/javascript" src="index.js"></script>
 
@@ -130,14 +165,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.2.5/firebase-app.js"></script>
+    <!-- <script src="/__/firebase/8.2.5/firebase-app.js"></script> -->
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
+    <!-- <script src="/__/firebase/8.2.5/firebase-analytics.js"></script> -->
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script
+    <!-- Initialize Firebase -->
+    <!-- <script src="/__/firebase/init.js"></script> -->
 </body>
 
 </html>
