@@ -1,5 +1,5 @@
 body {
-    background: radial-gradient(#F8F4E3, #D4CDC3);
+    background: radial-gradient(#f8f1ea, #faf3dd);
     font-family: "Playfair Display", sans-serif;
 }
 
@@ -7,9 +7,7 @@ body {
     padding-top: 4%;
     font-size: 5rem;
     text-align: center;
-    /* height: 90vh;
-    line-height: 90vh; */
-    color: #fcedd8;
+    color: rgb(0, 0, 0);
     font-family: 'Niconne', cursive;
     font-weight: 700;
     text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
@@ -38,7 +36,13 @@ ul > li {
 }
 
 #mainNavbar {
-    background-color: black;
+    background-color: #b4876b;
+}
+
+.btn-danger {
+    background-color: #85182a;
+    color: white;
+    border: none;
 }
 
 .card-img-top {
@@ -52,7 +56,7 @@ ul > li {
 .card {
     margin-bottom: 20%;
     /* background-color: #eddcd2; */
-    background-color: #9A998C;
+    background-color: #ddc0a4;
     border: none;
 }
 
@@ -83,30 +87,30 @@ ul > li {
 .card:hover:before {
     height: 30rem;
     width: 18rem;
-    border: 3px solid white;
+    border: 3px solid #a82637;
     border-right: none;
     border-bottom: none;
-    transition: height 0.25s linear, width 0.25s linear 0.25s;
+    transition: height 0.2s ease-in, width 0.2s ease-in 0.2s;
 }
 
 .card:hover:after {
     height: 30rem;
     width: 18rem;
-    border: 3px solid white;
+    border: 3px solid #a82637;
     border-left: none;
     border-top: none;
-    transition: height 0.25s linear, width 0.25s linear 0.25s;
+    transition: height 0.2s ease-in, width 0.2s ease-in 0.2s;
 }
 
 .card:hover {
     cursor: pointer;
-    background-color: #4e4e4e;
+    background-color: #dfc2aa;
     transition: all 0.32s;
 }
 
 .card-body {
     padding: 0;
-    color: white;
+    color: black;
 }
 
 .card-title {
@@ -158,6 +162,8 @@ ul > li {
     position: absolute;
     opacity: 0;
 }
+
+
 /**
    * 1. Adjust this to size
    */
@@ -168,7 +174,7 @@ ul > li {
     /* 1 */
     height: 1em;
     width: 2em;
-    background: #BDB9A6;
+    background: #000000;
     border-radius: 1em;
 }
 
