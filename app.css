@@ -5,23 +5,16 @@ body {
 }
 
 .title {
+    padding-top: 4%;
     font-size: 5rem;
     text-align: center;
     /* height: 90vh;
     line-height: 90vh; */
     color: #fcedd8;
-    /* background: #d52e3f; */
     font-family: 'Niconne', cursive;
     font-weight: 700;
-    text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b, 14px 14px 0px #c11a2b;
+    text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
 }
-
-
-/* .title {
-    font-weight: 400;
-    font-size: 5rem;
-    color: white; 
-} */
 
 ::selection {
     background-color: #a82637;
@@ -41,6 +34,10 @@ header {
     margin-bottom: 40px;
 }
 
+#mainNavbar {
+    background-color: black;
+}
+
 .card-img-top {
     padding: 1em;
     width: 18rem;
@@ -51,7 +48,8 @@ header {
 
 .card {
     margin-bottom: 20%;
-    background-color: #eddcd2;
+    /* background-color: #eddcd2; */
+    background-color: #141414;
     border: none;
 }
 
@@ -82,7 +80,7 @@ header {
 .card:hover:before {
     height: 30rem;
     width: 18rem;
-    border: 3px solid #85182a;
+    border: 3px solid white;
     border-right: none;
     border-bottom: none;
     transition: height 0.25s linear, width 0.25s linear 0.25s;
@@ -91,21 +89,21 @@ header {
 .card:hover:after {
     height: 30rem;
     width: 18rem;
-    border: 3px solid #85182a;
+    border: 3px solid white;
     border-left: none;
     border-top: none;
     transition: height 0.25s linear, width 0.25s linear 0.25s;
 }
 
 .card:hover {
-    color: white;
-    /* background-color: #f19c79; */
-    background-color: #ddb892;
+    cursor: pointer;
+    background-color: #4e4e4e;
     transition: all 0.32s;
 }
 
 .card-body {
     padding: 0;
+    color: white;
 }
 
 .card-title {
@@ -123,6 +121,15 @@ header {
     margin-bottom: 6%;
     background: #85182a;
     border: 0px solid white;
+}
+
+.card-button:hover {
+    border-color: #85182a;
+    color: #85182a;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff0000;
+    transform: translateY(-0.15em);
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
 .card-button:hover {
