@@ -13,7 +13,6 @@ body {
     text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
 }
 
-
  ::selection {
     background-color: #a82637;
     color: white;
@@ -21,15 +20,14 @@ body {
 
 .row {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     padding: 0;
 }
 
 
-ul > li {
+/* ul>li {
     display: inline-block
-}
-
+} */
 
 .header {
     display: flex;
@@ -42,6 +40,10 @@ ul > li {
     background-color: black;
 }
 
+.recipeCard {
+    padding: 0 10px;
+}
+
 .card-img-top {
     padding: 1em;
     width: 18rem;
@@ -50,6 +52,7 @@ ul > li {
 }
 
 .card {
+    margin: 0 auto;
     margin-bottom: 20%;
     background-color: #141414;
     border: none;
@@ -84,7 +87,6 @@ ul > li {
     border-right: none;
     border-bottom: none;
     transition: height 0.2s ease-in, width 0.2s ease-in 0.2s;
-
 }
 
 .card:hover:after {

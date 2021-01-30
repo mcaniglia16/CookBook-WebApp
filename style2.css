@@ -20,12 +20,8 @@ body {
 
 .row {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     padding: 0;
-}
-
-ul > li {
-    display: inline-block
 }
 
 .header {
@@ -53,7 +49,12 @@ ul > li {
     /* padding-bottom: 0%; */
 }
 
+.recipeCard {
+    padding: 0 10px;
+}
+
 .card {
+    margin: 0 auto;
     margin-bottom: 20%;
     /* background-color: #eddcd2; */
     background-color: #ddc0a4;

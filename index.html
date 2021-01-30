@@ -40,7 +40,7 @@
                 </li>
                 -->
             </ul>
-            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
+            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt" onclick="addRecipe()">Add Recipe</button>
         </div>
     </nav>
 
@@ -53,69 +53,76 @@
     </div>
 
     <!-- temp testing button-->
-    <button class="btn btn-outline-danger" onclick="addRecipe()">test button to add card</button>
+    <!-- <button class="btn btn-outline-danger" onclick="addRecipe()">test button to add card</button> -->
 
-    <section class="container-fluid align-items-center px-0">
-        <div class="row align-items-center" id="row1">
-            <ul class="list" id="list1">
-                <li>
-                    <div class="recipeCard col-2 text-center">
-                        <div class="card" style="width: 18rem;">
-                            <img src="imgs/recipe1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn card-button text-white">Go somewhere</a>
-                            </div>
-                        </div>
+    <section class="container-fluid align-items-center px-5">
+        <div class="row" id="list1">
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
                     </div>
-                </li>
-                <li>
-                    <div class="recipeCard col-2 text-center">
-                        <div class="card" style="width: 18rem;">
-                            <img src="imgs/recipe2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn card-button text-white">Go somewhere</a>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
                     </div>
-                </li>
-                <li>
-                    <div class="recipeCard col-2 text-center">
-                        <div class="card" style="width: 18rem;">
-                            <img src="imgs/recipe3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn card-button text-white">Go somewhere</a>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
                     </div>
-                </li>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
 
-                <li>
-                    <div class="recipeCard col-2 text-center">
-                        <div class="card" style="width: 18rem;">
-                            <img src="imgs/recipe4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn card-button text-white">Go somewhere</a>
-                            </div>
-                        </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="imgs/recipe6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <footer class="container-fluid align-items-center">
 
+    </section>
 
     </footer>
-
-
 
 
     <div id='recipePrompt' class='modal fade' role="dialog">
