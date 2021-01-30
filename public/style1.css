@@ -10,7 +10,7 @@ body {
     color: #fcedd8;
     font-family: 'Niconne', cursive;
     font-weight: 700;
-    text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
+    text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 6px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
 }
 
  ::selection {
