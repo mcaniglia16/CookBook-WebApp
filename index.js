@@ -31,3 +31,7 @@ function deleteRecipe(parent) {
     const p = parent.parentElement;
     p.remove();
 }
+
+function searchRecipe(inputId) {
+    console.log(inputId);
+}
