@@ -3,28 +3,21 @@ body {
     font-family: "Playfair Display", sans-serif;
 }
 
+.title {
+    font-weight: 400;
+    font-size: 5rem;
+    color: white;
+}
+
 ::selection {
     background-color: #a82637;
     color: white;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-.recipesBox {
+.row {
     display: flex;
     justify-content: space-evenly;
-    /* margin: 0;
-    padding: 0; */
-}
-
-.title {
-    font-weight: 400;
-    font-size: 5rem;
-    color: white;
+    padding: 0;
 }
 
 header {
@@ -35,13 +28,45 @@ header {
 }
 
 .card-img-top {
-    padding: 1.2em;
+    padding: 1em;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 8%;
+    /* padding-bottom: 0%; */
 }
 
+.card {
+    margin-bottom: 20%;
+}
 
-/* .card {
-    height: 20%;
-    width: 50%;
-} */
+.card-body {
+    padding: 0;
+}
 
-@media (max-width:) {}
+.card-title {
+    font-weight: 500;
+    /* font-style: italic; */
+    font-size: 2em;
+}
+
+.card-text {
+    padding-right: 6%;
+    padding-left: 6%;
+}
+
+.card-button {
+    margin-bottom: 6%;
+    background: #85182a;
+    border: 1px solid white;
+}
+
+.card-button:hover {
+    border-color: #85182a;
+    color: #85182a;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff0000;
+    transform: translateY(-0.15em);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {}
