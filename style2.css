@@ -26,6 +26,10 @@ body {
     padding: 0;
 }
 
+ul > li {
+    display: inline-block
+}
+
 .header {
     display: flex;
     justify-content: center;
