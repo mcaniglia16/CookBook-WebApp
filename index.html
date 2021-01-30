@@ -30,16 +30,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navlinks">
             <ul class="navbar-nav">
-                <!-- This will be removed 
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                </li>
-                -->
             </ul>
-            <button class="btn btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
+            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
         </div>
     </nav>
 
@@ -176,6 +168,7 @@
 
     <script type="text/javascript">
         var styleState = true;
+
         function swapCSS() {
             const current = document.getElementById('customStyle');
             current.href = styleState ? 'style2.css' : 'style1.css'
