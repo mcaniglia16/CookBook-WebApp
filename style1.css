@@ -150,7 +150,7 @@ body {
     align-content: right; */
     /* text-align: right; */
     flex-direction: row-reverse;
-    transform: translateY(50px);
+    transform: translateY(60px);
     /* transform: translateX(5px); */
 }
 
