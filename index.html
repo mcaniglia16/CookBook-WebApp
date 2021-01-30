@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link id="pagestyle" rel="stylesheet" href="app1.css">
+    <link id="customStyle" rel="stylesheet" href="style1.css">
     <title>My Cookbook</title>
 
 </head>
@@ -42,7 +42,7 @@
     </nav>
 
     <div class="toggle">
-        <label class="switch" onClick="swapStyleSheet('app1.css','app2.css')"><input type="checkbox" />    <div></div></label>
+        <label class="switch"><input id="toggler" onclick='swapCSS()' type="checkbox" />    <div></div></label>
     </div>
 
     <div class="header" class="pageTitle">
@@ -173,9 +173,11 @@
 
 
     <script type="text/javascript">
-        function swapStyleSheet(pagesheet, headsheet) {
-            document.getElementById('pagestyle').setAttribute('href', pagesheet);
-            document.getElementById('headstyle').setAttribute('href', headsheet);
+        var styleState = true;
+        function swapCSS() {
+            const current = document.getElementById('customStyle');
+            current.href = styleState ? 'style2.css' : 'style1.css'
+            styleState = !styleState;
         }
     </script>
 
