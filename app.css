@@ -68,5 +68,25 @@ header {
     transition: all 0.2s;
     cursor: pointer;
 }
+label {
+    display:block;
+    position:relative;
+   
+}
+
+label span {
+    position:absolute;
+    left: 3px;
+}
+
+label input, label textarea, label select {
+    margin-left: 120px; 
+
+}
+
+
+
+   
+
 
 @media (max-width: 800px) {}
