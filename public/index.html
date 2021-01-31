@@ -28,24 +28,25 @@
 
 </head>
 
-<body class="gradient-border" id="box">
+<body>
     <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-2 fixed-top">
         <a href="#" id="brand" class="navbar-brand">Cookbook</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navlinks" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navlinks">
-            <ul class="navbar-nav">
 
-            </ul>
-            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipeSearch">Search a recipe</button>
-            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
+        <div class="collapse navbar-collapse px-5" id="navlinks">
+            <button class="btn btn-danger btn-outline-danger addRecipe navbar-button" data-toggle="modal" data-target="#recipeSearch">Search a recipe</button>
+            <button class="btn btn-danger btn-outline-danger addRecipe navbar-button" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
         </div>
+
+        <div class="toggle px-5">
+            <label class="switch"><input id="toggler" onclick='swapCSS()' type="checkbox" /><div></div></label>
+        </div>
+
     </nav>
 
-    <div class="toggle px-5">
-        <label class="switch"><input id="toggler" onclick='swapCSS()' type="checkbox" />    <div></div></label>
-    </div>
+
 
     <div class="header" class="pageTitle">
         <h1 class="title">My Cookbook</h1>
@@ -126,8 +127,8 @@
     </div>
 
 
-    <footer>
-        <button onclick="mainApp.logOut()">Log Out</button>
+    <footer class="footer">
+        <button class="btn btn-outline-warning btn-warning" id="logout" onclick="mainApp.logOut()">Log Out</button>
     </footer>
 
 

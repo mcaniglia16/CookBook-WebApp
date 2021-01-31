@@ -1,7 +1,8 @@
 body {
+    min-height: 100vh;
+    width: 100vw;
     background: radial-gradient(#f8f1ea, #faf3dd);
     background-repeat: no-repeat;
-    min-height: 100vh;
     font-family: "Playfair Display", sans-serif;
 }
 
@@ -34,12 +35,25 @@ body {
 
 #mainNavbar {
     background-color: #b4876b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-collapse {
+    flex-direction: row-reverse;
+    /* justify-self: right; */
 }
 
 .btn-danger {
     background-color: #85182a;
     color: white;
     border: none;
+    margin: 0 2%;
+    transform: translateX(200px);
+}
+
+.recipeCard {
+    padding: 0 10px;
 }
 
 .card-img-top {
@@ -50,14 +64,9 @@ body {
     /* padding-bottom: 0%; */
 }
 
-.recipeCard {
-    padding: 0 10px;
-}
-
 .card {
     margin: 0 auto;
     margin-bottom: 20%;
-    /* background-color: #eddcd2; */
     background-color: #ddc0a4;
     border: none;
 }
@@ -154,6 +163,16 @@ body {
     cursor: pointer;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-warning {
+    background-color: #e6c924;
+    color: white;
+}
+
 .toggle {
     display: flex;
     /* justify-content: right;
@@ -168,11 +187,6 @@ body {
     position: absolute;
     opacity: 0;
 }
-
-
-/**
-   * 1. Adjust this to size
-   */
 
 .switch {
     display: inline-block;
