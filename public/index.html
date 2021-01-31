@@ -51,27 +51,27 @@
         <h1 class="title">My Cookbook</h1>
     </div>
 
-   <!-- Cards will be added here dynamically.
+    <!-- Cards will be added here dynamically.
          they *should* be ordered horizontally; don't change the classes unless you
          want to feel the debugging pain!!! -->
-    <section class="container-fluid align-items-center px-5">
-            <div class="recipeCard text-center" style="display:none;" id="outerRecipeCard">
-                <div class="row" id="list1">
-                    <div class="card" style="width: 18rem;" id="recipeCard">
-                        <img src="imgs/recipe1.jpg" class="card-img-top" alt="..."  id="cardPic0">
-                        <div class="card-body">
-                            <h5 class="card-title" id="cardName0"></h5>
-                            <p class="card-text" id="cardIngre0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn card-button text-white">Go somewhere</a>
-                            
-                        </div>
-                        <button class="btn btn-danger btn-outline-danger" onclick="deleteRecipe(this)">Delete</button>
+    <section class="container-fluid align-items-center">
+        <div class="recipeCard text-center" style="display:none;" id="outerRecipeCard">
+            <div class="row" id="list1">
+                <div class="card" style="width: 18rem;" id="recipeCard">
+                    <img src="imgs/recipe1.jpg" class="card-img-top" alt="..." id="cardPic0">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardName0"></h5>
+                        <p class="card-text" id="cardIngre0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+
                     </div>
+                    <button class="btn btn-danger btn-outline-danger" onclick="deleteRecipe(this)">Delete</button>
                 </div>
             </div>
+        </div>
     </section>
 
-    
+
 
 
     <div id='recipePrompt' class='modal fade' role="dialog">
@@ -91,7 +91,7 @@
                         <label><span>Oven temp:</span><input type="text" name="oven-temp"></label>
 
                     </form>
-                <img id="outputImg" width=300>
+                    <img id="outputImg" width=300>
                 </div>
                 <div class='modal-footer'>
                     <button type='button' class='btn btn-default' data-dismiss="modal" onclick="addRecipe()">Submit</button>
@@ -124,7 +124,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <footer>
         <button onclick="mainApp.logOut()">Log Out</button>

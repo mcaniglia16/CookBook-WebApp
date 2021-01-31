@@ -1,5 +1,7 @@
 body {
     background: radial-gradient(#525252, #141414);
+    background-repeat: no-repeat;
+    min-height: 100vh;
     font-family: "Playfair Display", sans-serif;
 }
 
@@ -22,7 +24,6 @@ body {
     display: flex;
     /* justify-content: space-evenly; */
 }
-
 
 
 /*ul>li {
@@ -79,6 +80,7 @@ body {
     right: 0;
     box-sizing: border-box;
 }
+
 
 /* This hover before and after causes problems with the card buttons.
 They become unclickable
@@ -191,17 +193,17 @@ They become unclickable
 }
 
 label {
-    display:block;
-    position:relative;
-   
+    display: block;
+    position: relative;
 }
 
 label span {
-    position:absolute;
+    position: absolute;
     left: 3px;
 }
 
-label input, label textarea, label select {
-    margin-left: 120px; 
-
+label input,
+label textarea,
+label select {
+    margin-left: 120px;
 }

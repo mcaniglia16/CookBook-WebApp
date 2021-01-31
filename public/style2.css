@@ -1,5 +1,7 @@
 body {
     background: radial-gradient(#f8f1ea, #faf3dd);
+    background-repeat: no-repeat;
+    min-height: 100vh;
     font-family: "Playfair Display", sans-serif;
 }
 
@@ -83,6 +85,7 @@ body {
     right: 0;
     box-sizing: border-box;
 }
+
 
 /* causes problems with card buttons (become unclickable)
 
@@ -199,17 +202,17 @@ body {
 }
 
 label {
-    display:block;
-    position:relative;
-   
+    display: block;
+    position: relative;
 }
 
 label span {
-    position:absolute;
+    position: absolute;
     left: 3px;
 }
 
-label input, label textarea, label select {
-    margin-left: 120px; 
-
+label input,
+label textarea,
+label select {
+    margin-left: 120px;
 }
