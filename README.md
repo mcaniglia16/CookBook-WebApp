@@ -10,7 +10,7 @@ Our project for McHacks8. A small and efficient webapp to store your favorite re
 - Search for meals and have their recipes suggested to you
 - Dark/Light mode toggle
 
-**any stored recipes may not persist after your browser session**
+(*any stored recipes may not persist after your browser session*)
 
 ## Contributers
 Made by: Marco Caniglia, Sebastian Cobuzzi, Victor Livernoche, William Tang.
