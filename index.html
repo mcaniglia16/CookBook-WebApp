@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook.io</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link id="customStyle" rel="stylesheet" href="style1.css">
+    <title>My Cookbook</title>
+
+</head>
+
+<body class="gradient-border" id="box">
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-2 fixed-top">
+        <a href="#" id="brand" class="navbar-brand">Cookbook</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navlinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navlinks">
+            <ul class="navbar-nav">
+
+            </ul>
+            <button class="btn btn-danger btn-outline-danger addRecipe ml-auto" data-toggle="modal" data-target="#recipePrompt">Add Recipe</button>
+        </div>
+    </nav>
+
+    <div class="toggle px-5">
+        <label class="switch"><input id="toggler" onclick='swapCSS()' type="checkbox" />    <div></div></label>
+    </div>
+
+    <div class="header" class="pageTitle">
+        <h1 class="title">My Cookbook</h1>
+    </div>
+
+    <!-- temp testing button-->
+    <!-- <button class="btn btn-outline-danger" onclick="addRecipe()">test button to add card</button> -->
+    
+
+    <section class="container-fluid align-items-center px-5">
+        <div class="row" id="list1"></div>
+    </div>
+            <div class="recipeCard col-xs-12 col-sm-6 col-md-3 text-center"  id="outerRecipeCard">
+                <div class="card" style="width: 18rem;" id="recipeCard">
+                    <img src="imgs/recipe1.jpg" class="card-img-top" alt="..."  id="cardPic">
+                    <div class="card-body">
+                        <h1 class="card-title" id="cardName">Recipe Name</h1>
+                        <p class="card-text" id="cardNutrition" style="font-size:23px";>All nutritional info will be displayed here</p>
+                        <a href="#" class="btn card-button text-white">Go somewhere</a>
+                    </div>
+            </div>
+          
+            
+        </div>
+
+    </section>
+
+    <footer class="container-fluid align-items-center">
+    </footer>
+
+
+    <div id='recipePrompt' class='modal fade' role="dialog">
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                </div>
+                <div class='modal-body'>
+                    <h3 class="modal-title">Add a recipe</h3>
+                    <form name="recipe-content" action="/path.py" id="recipe-content">
+                        <label><span>Recipe Name:</span> <input type="text" id="rName" name="recipe-name"></label>
+                        <label><span>Add picture: </span> <input type="file" id="fName" name="filename"></label>
+                        <label><span>Ingredients:</span><textarea rows = "5"  cols = "40" id="ings"name = "ingredients"></textarea></label>
+                        <label><span>Steps:</span><textarea  rows = "5" cols = "40" id="ste" name = "steps"></textarea></label>
+                        <label><span>Cook time:</span><input type="text" id="cTime" name="cook-time"placeholder="N/A if not applicable"></label>
+                        <label><span>Oven temp:</span><input type="text"  id="oTemp" name="oven-temp"placeholder="N/A if not applicable"></label> 
+                        <label><span>Nutritional info:</span><textarea rows = "5"  cols = "40" id="nFacts" name = "nutrition"></textarea></label>
+                        
+                    </form>
+                </div>
+                <div class='modal-footer'>
+                    <button type='submit' class='btn btn-default' id="submitButton" onclick="addRecipeCard()">Submit</button>
+                    <button type='button' class='btn btn-default' data-dismiss="modal" id="closeButton" onclick="closeNewRecipePrompt()">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+
+
+
+    <script type="text/javascript" src="index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
