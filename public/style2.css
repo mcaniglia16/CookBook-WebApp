@@ -23,7 +23,7 @@
     
     .row {
         display: flex;
-        /* justify-content: space-evenly; */
+        justify-content: center;
     }
     
     .header {
@@ -66,6 +66,9 @@
     
     .delete-button {
         margin-bottom: 8px;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-37px);
     }
     
     .btn-warning {
@@ -87,22 +90,26 @@
     
     .card {
         margin: 0 auto;
-        margin-bottom: 20%;
+        margin-bottom: 5%;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
         /* background-color: #eddcd2; */
         background-color: #ddc0a4;
-        border: 1px solid black;
+        border: 2px solid black;
+        position: relative;
     }
     
     .card:hover {
         cursor: pointer;
         background-color: #c4a58c;
         transform: translateY(-5px);
-        transition: all 0.32s;
+        transition: all 0.52s;
     }
     
     .card-body {
         padding: 0;
         color: black;
+        margin-bottom: 50px;
     }
     
     .card-title {

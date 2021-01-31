@@ -53,10 +53,10 @@
     <!-- Cards will be added here dynamically.
          they *should* be ordered horizontally; don't change the classes unless you
          want to feel the debugging pain!!! -->
-    <section class="container-fluid align-items-center">
+    <section class="container-fluid align-items-center px-5 py-0">
         <div class="recipeCard text-center" id="outerRecipeCard">
-            <div class="row" id="list1">
-                <div class="card" style="width: 18rem;" id="recipeCard">
+            <div class="row display-flex" id="list1">
+                <div class="card col-16" style="width: 18rem;" id="recipeCard">
                     <img src="imgs/recipe1.jpg" class="card-img-top" alt="..." id="cardPic0">
                     <div class="card-body">
                         <h5 class="card-title" id="cardName0">Recipe Title</h5>
@@ -94,7 +94,7 @@
                     <img id="outputImg" width=300>
                 </div>
                 <div class='modal-footer'>
-                    <button type='button' class='btn btn-default'  onclick="addRecipe()">Submit</button>
+                    <button type='button' class='btn btn-default' onclick="addRecipe()">Submit</button>
                     <button type='button' class='btn btn-default' data-dismiss="modal">Cancel</button>
                 </div>
             </div>

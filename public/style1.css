@@ -23,6 +23,7 @@ body {
 
 .row {
     display: flex;
+    justify-content: center;
 }
 
 .header {
@@ -73,37 +74,18 @@ body {
     flex-direction: column;
 }
 
-.delete-button {
-    margin-bottom: 8px;
-}
-
-
-/* .deleteRecipeButton {
-    padding: 0;
-    margin: 0;
-    height: 15px;
-    width: 15px;
-    text-align: center;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color: #571a22;
-} */
-
 .card {
     margin: 0 auto;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
     background-color: #141414;
-    border: none;
     border: 1px solid white;
+    position: relative;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    /* box-shadow: 0 0.5em 0.5em -0.4em #ff0000; */
-}
-
-.card:hover {
     cursor: pointer;
     background-color: #4e4e4e;
     transition: all 0.52s;
@@ -112,6 +94,14 @@ body {
 .card-body {
     padding: 0;
     color: white;
+    margin-bottom: 50px;
+}
+
+.delete-button {
+    margin-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-37px);
 }
 
 .card-title {
