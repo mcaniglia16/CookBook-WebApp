@@ -82,18 +82,18 @@
                 <div class='modal-body'>
                     <h3 class="modal-title">Add a recipe</h3>
                     <form action="/path.py" class="recipe-content" name="recipe-content">
-                        <label><span>Recipe Name:</span> <input type="text" name="recipe-name"></label>
-                        <label><span>Add picture: </span> <input type="file" id="myFile" accept="image/*" name="filename" onchange="getImg(event)"></label>
-                        <label><span>Ingredients:</span><textarea rows = "5" cols = "40" name = "ingredients"></textarea></label>
-                        <label><span>Steps:</span><textarea rows = "5" cols = "40" name = "steps"></textarea></label>
-                        <label><span>Cook time:</span><input type="text" name="cook-time"></label>
-                        <label><span>Oven temp:</span><input type="text" name="oven-temp"></label>
+                        <label><span>Recipe Name:</span> <input type="text" name="recipe-name"id="rName" ></label>
+                        <label><span>Add picture: </span> <input type="file" id="myFile" accept="image/*" name="file-name" id="fName" onchange="getImg(event)"></label>
+                        <label><span>Ingredients:</span><textarea rows = "5" cols = "40" name = "ingredients" id="ings"></textarea></label>
+                        <label><span>Steps:</span><textarea rows = "5" cols = "40" name = "steps" id="ste"></textarea></label>
+                        <label><span>Cook time:</span><input type="text" name="cook-time" id="cTime"></label>
+                        <label><span>Oven temp:</span><input type="text" name="oven-temp" id="oTemp"></label>
 
                     </form>
                     <img id="outputImg" width=300>
                 </div>
                 <div class='modal-footer'>
-                    <button type='button' class='btn btn-default' data-dismiss="modal" onclick="addRecipe()">Submit</button>
+                    <button type='button' class='btn btn-default'  onclick="addRecipe()">Submit</button>
                     <button type='button' class='btn btn-default' data-dismiss="modal">Cancel</button>
                 </div>
             </div>

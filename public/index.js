@@ -11,37 +11,85 @@ function swapCSS() {
 }
 
 function addRecipe() {
-    if (firstEntry) {
-        firstEntry = false
-        var hidden = document.getElementById("outerRecipeCard");
-        hidden.style.display = "block";
-        document.getElementById("cardName0").innerHTML = recipeName;
-    } else {
-        var newCard = baseCard.cloneNode(true);
-        console.log(newCard.childNodes)
-        console.log(newCard.childNodes[3].childNodes)
-        newCard.id = "recipeCard" + ++i;
-        newCard.childNodes[1].id = "cardPic" + i;
-        newCard.childNodes[3].childNodes[1].id = "cardName" + i;
-        newCard.childNodes[3].childNodes[3].id = "cardIngre" + i;
-        baseCard.parentNode.appendChild(newCard);
+  
 
-    }
-
-    console.log(document.forms['recipe-content']['recipe-name']);
-
-    var recipeName = document.forms['recipe-content']['recipe-name'].value;
+    var recipeName = document.forms["recipe-content"]["recipe-name"].value;
     var ingredients = document.forms["recipe-content"]["ingredients"].value;
     var steps = document.forms["recipe-content"]["steps"].value;
     var cookTime = document.forms["recipe-content"]["cook-time"].value;
     var ovenTemp = document.forms["recipe-content"]["oven-temp"].value;
+    
+    document.getElementById("cardName0").innerHTML = recipeName;
+    
+    var incorrectInput = false;
+    var nameEntered = false;
+    var ingEntered = false;
+    var stepsEntered = false;
+    var cTimeEntered = false;
+    var oTempEntered = false;
+    
 
-    console.log(recipeName);
-    document.getElementById("cardName" + i).innerHTML = recipeName;
-    document.getElementById("cardPic" + i).src = userCustomImg;
-    document.getElementById("cardIngre" + i).innerHTML = ingredients;
-    console.log(userCustomImg);
+    if (recipeName == "") {
+        document.getElementById("rName").style.borderColor = "red";
+        incorrectInput = true;
+    } else { nameEntered = true; }
+
+
+    if (ingredients == "") {
+        document.getElementById("ings").style.borderColor = "red";
+        incorrectInput = true;
+    } else { ingEntered = true; }
+
+    if (steps == "") {
+        document.getElementById("ste").style.borderColor = "red";
+        incorrectInput = true;
+    } else { stepsEntered = true; }
+
+    if (cookTime == "") {
+        document.getElementById("cTime").style.borderColor = "red";
+        incorrectInput = true;
+    } else { cTimeEntered=true; }
+
+    if (ovenTemp == "") {
+        document.getElementById("oTemp").style.borderColor = "red";
+        incorrectInput = true;
+    } else { oTempEntered = true; }
+
+    console.log(incorrectInput);
+
+
+    if (!incorrectInput) {
+        $('#recipePrompt').modal('hide');
+        document.getElementById("rName").value = "";
+        document.getElementById("ings").value = "";
+        document.getElementById("ste").value = "";
+        document.getElementById("cTime").value = "";
+        document.getElementById("oTemp").value = "";
+        document.getElementById("nFacts").value = "";
+
+        if (firstEntry) {
+            firstEntry = false
+            var hidden = document.getElementById("outerRecipeCard");
+            hidden.style.display = "block";
+            document.getElementById("cardName").innerHTML = recipeName;
+        }
+        else {
+            var newCard = baseCard.cloneNode(true);
+            newCard.id = "new" + ++i;
+            baseCard.parentNode.appendChild(newCard);
+        }
+    }
+    if(nameEntered){document.getElementById("rName").style.borderColor="black";}
+    if(ingEntered){document.getElementById("ings").style.borderColor = "black";}
+    if(stepsEntered){document.getElementById("ste").style.borderColor = "black";}
+    if(cTimeEntered){document.getElementById("cTime").style.borderColor = "black";}
+    if(oTempEntered){document.getElementById("oTemp").style.borderColor = "black";}
+   
+        
+        
 }
+
+
 
 function deleteRecipe(node) {
     if (i - 1 > 0) {
