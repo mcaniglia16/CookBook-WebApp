@@ -11,16 +11,14 @@ function swapCSS() {
 }
 
 function addRecipe() {
-
-
-
     var recipeName = document.forms["recipe-content"]["recipe-name"].value;
     var ingredients = document.forms["recipe-content"]["ingredients"].value;
     var steps = document.forms["recipe-content"]["steps"].value;
     var cookTime = document.forms["recipe-content"]["cook-time"].value;
     var ovenTemp = document.forms["recipe-content"]["oven-temp"].value;
-    
-    document.getElementById("cardName0").innerHTML = recipeName;
+
+    console.log("cardName"+i)
+    //document.getElementById("cardName"+i).innerHTML = recipeName;
     
     var incorrectInput = false;
     var nameEntered = false;
@@ -72,7 +70,7 @@ function addRecipe() {
             firstEntry = false
             var hidden = document.getElementById("outerRecipeCard");
             hidden.style.display = "block";
-            document.getElementById("cardName").innerHTML = recipeName;
+            document.getElementById("cardName"+i).innerHTML = recipeName;
         }
         else {
             var newCard = baseCard.cloneNode(true);
@@ -89,7 +87,10 @@ function addRecipe() {
     if(cTimeEntered){document.getElementById("cTime").style.borderColor = "black";}
     if(oTempEntered){document.getElementById("oTemp").style.borderColor = "black";}
    
-        
+
+    document.getElementById("cardName" + i).innerHTML = recipeName;
+    document.getElementById("cardPic" + i).src = userCustomImg;
+    document.getElementById("cardIngre" + i).innerHTML = ingredients;
         
 }
 
@@ -98,6 +99,7 @@ function addRecipe() {
 function deleteRecipe(node) {
     if (i > 0) {
         node.parentElement.parentElement.remove();
+        i--;
     } else {
         firstEntry = true;
         var hidden = document.getElementById("outerRecipeCard");
@@ -183,6 +185,7 @@ function addRecipeSearch() {
         document.getElementById("cardPic" + i).src = latestSearch['img'];
         document.getElementById("cardIngre" + i).innerHTML = latestSearch['ingredients'];
     }
+
 }
 
 
