@@ -1,0 +1,202 @@
+    body {
+        background: radial-gradient(#f8f1ea, #faf3dd);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
+        font-family: "Playfair Display", sans-serif;
+    }
+    
+    .title {
+        padding-top: 4%;
+        font-size: 5rem;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-family: 'Niconne', cursive;
+        font-weight: 700;
+        text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
+    }
+    
+     ::selection {
+        background-color: #a82637;
+        color: white;
+    }
+    
+    .row {
+        display: flex;
+        /* justify-content: space-evenly; */
+    }
+    
+    .header {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    #mainNavbar {
+        background-color: #b4876b;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar-collapse {
+        flex-direction: row-reverse;
+        transform: translateX(100px);
+    }
+    
+    .navbar-button {
+        margin-right: 15px;
+    }
+    
+    .navbar-button:nth-last-child() {
+        margin-right: 0;
+    }
+    
+    .btn-danger {
+        background-color: #85182a;
+        color: white;
+        border: none;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .delete-button {
+        margin-bottom: 8px;
+    }
+    
+    .btn-warning {
+        background-color: #fbbd11;
+        color: white;
+    }
+    
+    .card-img-top {
+        padding: 1em;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 8%;
+        /* padding-bottom: 0%; */
+    }
+    
+    .recipeCard {
+        padding: 0 10px;
+    }
+    
+    .card {
+        margin: 0 auto;
+        margin-bottom: 20%;
+        /* background-color: #eddcd2; */
+        background-color: #ddc0a4;
+        border: 1px solid black;
+    }
+    
+    .card:hover {
+        cursor: pointer;
+        background-color: #c4a58c;
+        transform: translateY(-5px);
+        transition: all 0.32s;
+    }
+    
+    .card-body {
+        padding: 0;
+        color: black;
+    }
+    
+    .card-title {
+        font-weight: 500;
+        /* font-style: italic; */
+        font-size: 2em;
+    }
+    
+    .card-text {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+    
+    .card-button {
+        margin-bottom: 6%;
+        background: #85182a;
+        border: 0px solid white;
+    }
+    
+    .card-button:hover {
+        border-color: #85182a;
+        color: #85182a;
+        box-shadow: 0 0.5em 0.5em -0.4em #ff0000;
+        transform: translateY(-0.15em);
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    
+    .card-button:hover {
+        border-color: #85182a;
+        color: #85182a;
+        box-shadow: 0 0.5em 0.5em -0.4em #ff0000;
+        transform: translateY(-0.15em);
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    
+    .toggle {
+        display: flex;
+        /* justify-content: right;
+align-content: right; */
+        /* text-align: right; */
+        flex-direction: row-reverse;
+        transform: translateY(60px);
+        /* transform: translateX(5px); */
+    }
+    
+    .switch input {
+        position: absolute;
+        opacity: 0;
+    }
+    /**
+* 1. Adjust this to size
+*/
+    
+    .switch {
+        display: inline-block;
+        font-size: 20px;
+        /* 1 */
+        height: 1em;
+        width: 2em;
+        background: #000000;
+        border-radius: 1em;
+    }
+    
+    .switch div {
+        height: 1em;
+        width: 1em;
+        border-radius: 1em;
+        background: #FFF;
+        box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+        transition: all 300ms;
+    }
+    
+    .switch input:checked+div {
+        -webkit-transform: translate3d(100%, 0, 0);
+        -moz-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    
+    label {
+        display: block;
+        position: relative;
+    }
+    
+    label span {
+        position: absolute;
+        left: 3px;
+    }
+    
+    label input,
+    label textarea,
+    label select {
+        margin-left: 120px;
+    }

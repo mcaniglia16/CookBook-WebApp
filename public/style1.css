@@ -1,0 +1,208 @@
+body {
+    background: radial-gradient(#525252, #141414);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: "Playfair Display", sans-serif;
+}
+
+.title {
+    padding-top: 4%;
+    font-size: 5rem;
+    text-align: center;
+    color: #fcedd8;
+    font-family: 'Niconne', cursive;
+    font-weight: 700;
+    text-shadow: 3px 3px 0px #eb452b, 5px 5px 0px #efa032, 7px 7px 0px #052939, 8px 8px 0px #c11a2b, 10px 10px 0px #c11a2b, 12px 12px 0px #c11a2b;
+}
+
+ ::selection {
+    background-color: #a82637;
+    color: white;
+}
+
+.row {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#mainNavbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-collapse {
+    flex-direction: row-reverse;
+    transform: translateX(100px);
+}
+
+.navbar-button {
+    margin-right: 15px;
+}
+
+.navbar-button:nth-last-child() {
+    margin-right: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.recipeCard {
+    padding: 0 10px;
+}
+
+.card-img-top {
+    padding: 1em;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 8%;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-button {
+    margin-bottom: 8px;
+}
+
+
+/* .deleteRecipeButton {
+    padding: 0;
+    margin: 0;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #571a22;
+} */
+
+.card {
+    margin: 0 auto;
+    margin-bottom: 20%;
+    background-color: #141414;
+    border: none;
+    border: 1px solid white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 0.5em 0.5em -0.4em #ff0000; */
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #4e4e4e;
+    transition: all 0.52s;
+}
+
+.card-body {
+    padding: 0;
+    color: white;
+}
+
+.card-title {
+    font-weight: 500;
+    /* font-style: italic; */
+    font-size: 2em;
+}
+
+.card-text {
+    padding-right: 6%;
+    padding-left: 6%;
+}
+
+.card-button {
+    margin-bottom: 6%;
+    background: #85182a;
+    border: 0px solid white;
+}
+
+.card-button:hover {
+    border-color: #85182a;
+    color: #85182a;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff0000;
+    transform: translateY(-0.15em);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    border-color: #85182a;
+    color: #85182a;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff0000;
+    transform: translateY(-0.15em);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.toggle {
+    display: flex;
+    /* justify-content: right;
+    align-content: right; */
+    /* text-align: right; */
+    flex-direction: row-reverse;
+    transform: translateY(60px);
+    /* transform: translateX(5px); */
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch {
+    display: inline-block;
+    font-size: 20px;
+    /* 1 */
+    height: 1em;
+    width: 2em;
+    background: #BDB9A6;
+    border-radius: 1em;
+}
+
+.switch div {
+    height: 1em;
+    width: 1em;
+    border-radius: 1em;
+    background: #FFF;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.switch input:checked+div {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+label {
+    display: block;
+    position: relative;
+}
+
+label span {
+    position: absolute;
+    left: 3px;
+}
+
+label input,
+label textarea,
+label select {
+    margin-left: 120px;
+}
