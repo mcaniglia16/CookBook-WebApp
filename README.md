@@ -17,3 +17,6 @@ Our project for McHacks8. A small and efficient webapp to store your favorite re
 
 ## Contributers
 Made by: Marco Caniglia, Sebastian Cobuzzi, Victor Livernoche, William Tang.
+
+## Acknowledgments
+One feature of our app uses the [mealDB api](https://www.themealdb.com/api.php).
