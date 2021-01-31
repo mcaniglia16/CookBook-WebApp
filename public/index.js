@@ -15,7 +15,7 @@ function addRecipe() {
         firstEntry = false
         var hidden = document.getElementById("outerRecipeCard");
         hidden.style.display = "block";
-        document.getElementById("cardName0").innerHTML = recipeName;
+        document.getElementById("cardName"+i).innerHTML = recipeName;
     } else {
         var newCard = baseCard.cloneNode(true);
         console.log(newCard.childNodes)
@@ -114,7 +114,7 @@ function addRecipeSearch() {
             firstEntry = false
             var hidden = document.getElementById("outerRecipeCard");
             hidden.style.display = "block";
-            document.getElementById("cardName0").innerHTML = latestSearch['title'];
+            document.getElementById("cardName"+i).innerHTML = latestSearch['title'];
         } else {
             var newCard = baseCard.cloneNode(true);
             console.log(newCard.childNodes[1].id)
