@@ -3,8 +3,6 @@ html {
     font-weight: 300;
     font-size: 30px;
     background: radial-gradient(#f8f1ea, #faf3dd);
-    min-height: 100vh;
-    background-repeat: no-repeat;
     color: black;
 }
 
