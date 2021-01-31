@@ -46,7 +46,7 @@ function addRecipe() {
 }
 
 function deleteRecipe(node) {
-    if (i-1 > 0) {
+    if (i > 0) {
         node.parentElement.remove();
     }
     else {
